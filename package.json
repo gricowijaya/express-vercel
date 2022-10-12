@@ -1,0 +1,14 @@
+{
+  "name": "express-vercel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitlab.com:gricowijaya/express-vercel.git",
+  "author": "Gede Rico Wijaya <gricowijaya@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
