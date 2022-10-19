@@ -1,30 +1,9 @@
 const express = require('express')
 const router = express.Router();
+const controller = require('../controllers/index')
 
-router.get('/', async(req, res) => { 
-    try {
-        res.json({
-            status : 200,
-            message: "Get Data Successfully",
-        })
+router.get('/', async(req, res) => { controller.index });
 
-    } catch (err) { 
-        console.error(err);
-        return res.status(500).send("Server error");
-    }
-});
-
-router.get('/delete-user', async(req, res) => { 
-    try {
-        res.json({
-            status : 200,
-            message: "Deleted User Data Successfully",
-        })
-
-    } catch (err) { 
-        console.error(err);
-        return res.status(500).send("Server error");
-    }
-});
+router.get('/delete-user', async(req, res) => { controller.delete() });
 
 module.exports = router; 
