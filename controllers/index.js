@@ -1,27 +1,23 @@
 module.exports = {
-    index: async(req, res) => {
+    index: async (req, res, next) => {
         try {
-            res.status(200).json({
-                status : true,
-                message: "Get Data Successfully",
-            })
-
-        } catch (err) { 
-            console.error(err);
-            return res.status(500).send("Server error");
+            return res.status(200).json({
+                status: true,
+                message: "Get Data Successfully"
+            });
+        } catch (error) {
+            next(error)
         }
     },
-
-    delete: async(req, res) => {
+    
+    delete: async (req, res, next) => {
         try {
-            res.status(200).json({
-                status : true,
-                message: "Deleted User Data Successfully",
-            })
-
-        } catch (err) { 
-            console.error(err);
-            return res.status(500).send("Server error");
+            return res.status(200).json({
+                status: true,
+                message: "Deleted User Data Successfully"
+            });
+        } catch (error) {
+            next(error)
         }
     },
-}
+};
