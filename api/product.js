@@ -10,7 +10,20 @@ router.get('/', async(req, res) => {
 
     } catch (err) { 
         console.error(err);
-        return res.status(500).send("Server error");k
+        return res.status(500).send("Server error");
+    }
+});
+
+router.get('/delete-user', async(req, res) => { 
+    try {
+        res.json({
+            status : 200,
+            message: "Deleted User Data Successfully",
+        })
+
+    } catch (err) { 
+        console.error(err);
+        return res.status(500).send("Server error");
     }
 });
 
